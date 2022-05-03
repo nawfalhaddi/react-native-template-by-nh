@@ -1,0 +1,8 @@
+{
+  "name": "react-native-template-by-nh",
+  "version": "0.0.5",
+  "description": "React Native Template with best libraries, structure and performance",
+  "repository": "git@github.com:nawfalhaddi/react-native-template-by-nh.git",
+  "author": "Nawfal Haddi <nawfalhaddi@gmail.com>",
+  "license": "MIT"
+}
