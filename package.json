@@ -1,7 +1,7 @@
 {
   "name": "react-native-template-by-nh",
   "version": "0.0.1",
-  "description": "React Native Template for a quick start with TypeScript using best libraries and structure",
+  "description": "React Native Template for a quick start with TypeScript using best existing libraries and scalable structure",
   "repository": "git@github.com:nawfalhaddi/react-native-template-by-nh.git",
   "author": "Nawfal Haddi <nawfalhaddidev@gmail.com>",
   "license": "MIT"
