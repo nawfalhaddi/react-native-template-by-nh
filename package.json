@@ -1,8 +1,27 @@
 {
-  "name": "react-native-template-by-nh",
+  "name": "@nawfalhaddidev/react-native-template-by-nh",
   "version": "0.0.1",
   "description": "React Native Template for a quick start with TypeScript using best existing libraries and scalable structure",
-  "repository": "git@github.com:nawfalhaddi/react-native-template-by-nh.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nawfalhaddi/react-native-template-by-nh.git"
+  },
   "author": "Nawfal Haddi <nawfalhaddidev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nawfalhaddi/react-native-template-by-nh/issues"
+  },
+  "homepage": "https://github.com/nawfalhaddi/react-native-template-by-nh#readme",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "template",
+    "typescript",
+    "scalable",
+    "organized"
+  ]
 }
