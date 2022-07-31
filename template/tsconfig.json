@@ -46,8 +46,10 @@
       "@lib/*": ["./src/lib/*"],
       "@navigation/*": ["./src/navigation/*"],
       "@screens/*": ["./src/screens/*"],
+      "@store": ["./src/store/index"],
       "@store/*": ["./src/store/*"],
       "@ui/*": ["./src/ui/*"],
+      "@translation/*": ["./src/translation/*"],
       "@utils/*": ["./src/utils/*"],
       "@root/*": ["./*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,

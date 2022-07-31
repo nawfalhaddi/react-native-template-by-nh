@@ -25,6 +25,7 @@ module.exports = {
           '@store': './src/store',
           '@ui': './src/ui',
           '@utils': './src/utils',
+          '@translation': './src/translation',
           '@root': '.',
         },
       },
