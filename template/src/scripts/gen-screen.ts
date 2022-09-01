@@ -78,6 +78,8 @@ if (!screenName) {
   fs.mkdirSync(screenPath + `components/${screenName}View`, {recursive: true});
   fs.mkdirSync(screenPath + 'hooks', {recursive: true});
   fs.writeFileSync(screenPath + 'hooks/.gitkeep', '');
+  fs.mkdirSync(screenPath + '__tests__', {recursive: true});
+  fs.writeFileSync(screenPath + '__tests__/.gitkeep', '');
 
   if (!fs.existsSync(wrapperPath)) {
     fs.writeFileSync(
