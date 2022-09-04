@@ -27,7 +27,7 @@ const rootReducer = combineReducers({
 //for more details https://github.com/mrousavy/react-native-mmkv
 
 const mmkvStorage = new MMKV({
-  id: 'edukaan-app-storage',
+  id: 'projectName-app-storage',
   encryptionKey: 'Please_add_your_encryption_key_for_your_storage',
 });
 
