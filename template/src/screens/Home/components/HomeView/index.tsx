@@ -4,8 +4,9 @@ import {RootStackParamList} from '@root/src/types/navigation';
 import {useDispatch, useSelector} from '@store';
 import {incrementByAmount} from '@store/counterSlice';
 import {Button} from '@ui/components/Button/Button';
+import {styled} from '@ui/theme/styled-components';
 import React from 'react';
-import {StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export interface HomeViewProps
   extends NativeStackScreenProps<RootStackParamList, RouteNames.HomeScreen> {}
@@ -14,23 +15,22 @@ export default function HomeView({navigation}: HomeViewProps) {
   const {value} = useSelector(state => state.counter);
   const dispatch = useDispatch();
   return (
-    <View style={{...styles.root}}>
-      <Text>{value}</Text>
+    <Root>
+      <Text>This button is an implementation for redux</Text>
+      <Text> Value: {value}</Text>
       <Button
         text="+ Increment"
         onPress={() => {
-          dispatch(incrementByAmount(3));
+          dispatch(incrementByAmount(1));
         }}
       />
-    </View>
+    </Root>
   );
 }
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 30,
-  },
-});
+const Root = styled(View)(({theme: {spacingValues}}) => ({
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  paddingVertical: spacingValues.vLg,
+}));
