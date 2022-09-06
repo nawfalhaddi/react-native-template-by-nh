@@ -8,13 +8,14 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "setup": "yarn install && cd ./android && ./gradlew clean && cd .. && npx pod-install",
+    "setup": "yarn install && cd ./android && ./gradlew clean && cd .. && npx pod-install && yarn prepare",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "gen-screen": "ts-node ./src/scripts/gen-screen.ts"
+    "gen-screen": "ts-node ./src/scripts/gen-screen.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.3",
@@ -73,6 +74,7 @@
     "babel-plugin-react-native-web": "^0.17.7",
     "eslint": "7.32.0",
     "eslint-plugin-storybook": "^0.5.12",
+    "husky": "^8.0.1",
     "jest": "26.6.3",
     "metro-react-native-babel-preset": "^0.71.0",
     "mustache": "^4.2.0",
