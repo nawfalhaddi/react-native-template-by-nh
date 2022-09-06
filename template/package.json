@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "setup": "yarn install && cd ./android && ./gradlew clean && cd .. && npx pod-install && yarn prepare",
+    "setup": "yarn install && cd ./android && ./gradlew clean && cd .. && bundle install && npx pod-install && yarn prepare",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
