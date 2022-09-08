@@ -8,7 +8,4 @@ declare global {
 
 export type RootStackParamList = {
   [RouteNames.HomeScreen]: undefined;
-  [RouteNames.DetailsScreen]: undefined;
-  [RouteNames.LoginScreen]: undefined;
-  [RouteNames.SignUpScreen]: undefined;
 };
