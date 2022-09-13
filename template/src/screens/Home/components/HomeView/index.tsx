@@ -112,7 +112,7 @@ export default function HomeView({navigation}: HomeViewProps) {
 const styles = StyleSheet.create({
   contentContainerStyle: {
     alignItems: 'center',
-    paddingBottom: 100,
+    paddingBottom: verticalScale(100),
   },
 });
 
