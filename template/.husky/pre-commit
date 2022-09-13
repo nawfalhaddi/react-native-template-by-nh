@@ -1,7 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-#enable scripts that you want to run or add other ones
-
-# yarn lint
-# yarn test
