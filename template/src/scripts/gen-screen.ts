@@ -27,28 +27,30 @@ export default function {{screenName}}(props: {{screenName}}Props) {
 const mainViewTemplate = `import {RouteNames} from '@navigation/routesNames';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@root/src/types/navigation';
+import {styled} from '@ui/theme/styled-components';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export interface {{screenName}}ViewProps
   extends NativeStackScreenProps<RootStackParamList, RouteNames.{{screenName}}Screen> {}
 
 export default function {{screenName}}View({navigation}: {{screenName}}ViewProps) {
   return (
-    <View style={styles.rootView}>
-      <Text>{{screenName}} View</Text>
-    </View>
+    <MainContainer>
+      <Text>Login View</Text>
+    </MainContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  rootView: {
+const MainContainer = styled(View)(
+  ({theme: {colors, textType, spacingValues}}) => ({
     flex: 1,
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-});
+    paddingVertical: spacingValues.vLg,
+    paddingHorizontal: spacingValues.hLg,
+  }),
+);
 `;
 
 //extract screen name
