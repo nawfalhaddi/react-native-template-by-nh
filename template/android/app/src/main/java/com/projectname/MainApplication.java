@@ -12,6 +12,7 @@ import com.facebook.soloader.SoLoader;
 import com.projectname.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.facebook.react.modules.i18nmanager.I18nUtil;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -52,6 +53,9 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    //Allow RTL 
+    I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
+    sharedI18nUtilInstance.allowRTL(getApplicationContext(), true);
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
