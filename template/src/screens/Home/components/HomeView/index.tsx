@@ -131,7 +131,6 @@ export default function HomeView({navigation}: HomeViewProps) {
           i18n
             .changeLanguage(i18n.language === 'ar' ? 'en' : 'ar')
             .then(async () => {
-              console.log('i18n.dir', i18n.dir());
               await I18nManager.forceRTL(i18n.dir() === 'rtl');
             })
             .then(() => RNRestart.Restart())
