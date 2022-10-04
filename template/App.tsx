@@ -12,6 +12,7 @@ import {ThemeProvider} from '@ui/theme/styled-components';
 import projectNameTheme from '@ui/theme';
 import {QueryClientProvider} from '@tanstack/react-query';
 import {queryClient} from '@lib/react-query';
+import '@translation/language-detector';
 
 export const navigationRef = createNavigationContainerRef<RootStackParamList>();
 const App = () => {

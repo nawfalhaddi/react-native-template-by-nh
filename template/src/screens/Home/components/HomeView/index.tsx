@@ -7,10 +7,19 @@ import {useGetPosts} from '@screens/Home/hooks/useGetPosts';
 import {useDispatch, useSelector} from '@store';
 import {incrementByAmount} from '@store/counterSlice';
 import {Button} from '@ui/components/Button/Button';
-import {verticalScale} from '@ui/theme/scaling';
+import {horizontalScale, verticalScale} from '@ui/theme/scaling';
 import {styled} from '@ui/theme/styled-components';
 import React from 'react';
-import {Alert, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {
+  Alert,
+  I18nManager,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import RNRestart from 'react-native-restart';
 
 export interface HomeViewProps
   extends NativeStackScreenProps<RootStackParamList, RouteNames.HomeScreen> {}
@@ -29,6 +38,7 @@ const triggerAlert = (title: string, message: string) => {
 export default function HomeView({navigation}: HomeViewProps) {
   const {value} = useSelector(state => state.counter);
   const dispatch = useDispatch();
+  const {t, i18n} = useTranslation();
   const postsQuery = useGetPosts({
     /*always use the option enabled with 'useIsFocused'
      * as react navigation keeps stacks mounted in the background
@@ -41,7 +51,8 @@ export default function HomeView({navigation}: HomeViewProps) {
 
   return (
     <Root contentContainerStyle={styles.contentContainerStyle}>
-      <Title>Implementation of redux</Title>
+      <Title>Redux example</Title>
+      <Description>Implementation of redux</Description>
       <Description> Value: {value}</Description>
       <Button
         text="+ Increment by one "
@@ -50,10 +61,10 @@ export default function HomeView({navigation}: HomeViewProps) {
         }}
       />
       <Separator />
-
-      <Title>
+      <Title>React query example: Query</Title>
+      <Description>
         Implementation of react query with typescript supported: fetching data
-      </Title>
+      </Description>
       <Description>
         Query loading state: {String(postsQuery?.isLoading)}
       </Description>
@@ -68,9 +79,11 @@ export default function HomeView({navigation}: HomeViewProps) {
 
       <Separator />
 
-      <Title>
+      <Title>React query example: Mutation</Title>
+
+      <Description>
         Implementation of react query with typescript supported: Posting data
-      </Title>
+      </Description>
       <Description>
         Query loading state: {String(createPostMutation?.isLoading)}
       </Description>
@@ -105,32 +118,49 @@ export default function HomeView({navigation}: HomeViewProps) {
           );
         }}
       />
+
+      <Separator />
+
+      <Title>Translation example</Title>
+
+      <Description>{t('txt_welcome_to_rn_by_nh')}</Description>
+
+      <Button
+        text={t('txt_change_language')}
+        onPress={() =>
+          i18n
+            .changeLanguage(i18n.language === 'ar' ? 'en' : 'ar')
+            .then(async () => {
+              await I18nManager.forceRTL(i18n.dir() === 'rtl');
+            })
+            .then(() => RNRestart.Restart())
+        }
+      />
     </Root>
   );
 }
 
 const styles = StyleSheet.create({
   contentContainerStyle: {
-    alignItems: 'center',
     paddingBottom: verticalScale(100),
+    paddingHorizontal: horizontalScale(10),
   },
 });
 
 const Root = styled(ScrollView)(({theme: {spacingValues, colors}}) => ({
   flex: 1,
-  paddingTop: spacingValues.vLg,
-  paddingHorizontal: spacingValues.hSm,
   backgroundColor: colors.orange200,
 }));
 
 const Title = styled(Text)(({theme: {spacingValues, textType}}) => ({
   ...textType.BodyLgBold,
-  textAlign: 'center',
+  textAlign: 'left',
 }));
 
 const Description = styled(Text)(({theme: {spacingValues, textType}}) => ({
   ...textType.BodySm,
   marginBottom: spacingValues.vMd,
+  textAlign: 'left',
 }));
 
 const Separator = styled(View)(({theme: {spacingValues, colors}}) => ({
