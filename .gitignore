@@ -1,3 +1,6 @@
 node_modules/
 template/node_modules
+template/android/build
+template/ios/build
+template/android/app/build
 .DS_Store
