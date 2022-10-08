@@ -1,6 +1,6 @@
 ## Get started
 
-This library is made with love, to explain in details our personal approach to design a react native application with best third-party libraries, please check our [documentation](https://nawfalhaddi.github.io/react-native-template-by-nh/) for more details.
+This template was made with love, to share in details our personal approach to design a react native application with best third-party libraries, please check our [documentation](https://nawfalhaddi.github.io/react-native-template-by-nh/) for more details.
 If you have any idea or suggestion to improve this template, please feel free to reach out to [us](https://www.linkedin.com/in/nawfalhaddi/) or open an issue/PR inside this repo.
 
 ## Libraries that are used in this template:
