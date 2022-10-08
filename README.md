@@ -3,10 +3,6 @@
 This library is made with love, to explain in details our personal approach to design a react native application with best third-party libraries, please check our [documentation](https://nawfalhaddi.github.io/react-native-template-by-nh/) for more details.
 If you have any idea or suggestion to improve this template, please feel free to reach out to [us](https://www.linkedin.com/in/nawfalhaddi/) or open an issue/PR inside this repo.
 
-## What you'll need:
-
-- Make sure your environnement is ready to run a react native application. if it's not, please check the [official documentation](https://reactnative.dev/docs/environment-setup) of react native to set up your environnement.
-
 ## Libraries that are used in this template:
 
 - Navigation: `react-navigation V6`
@@ -17,6 +13,10 @@ If you have any idea or suggestion to improve this template, please feel free to
 - Storage: `react-native-mmkv`
 - Styling: `styled-components`
 - Testing: `@testing-library/react-native`
+
+## What you'll need:
+
+- Make sure your environnement is ready to run a react native application. if it's not, please check the [official documentation](https://reactnative.dev/docs/environment-setup) of react native to set up your environnement.
 
 ## Start a new project:
 
