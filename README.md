@@ -1,7 +1,18 @@
 ## Get started
 
-This documentation is made with love, to explain in details our personal approach to design a react native application with best third-party libraries.
-If you have any idea or suggestion to improve this template, please feel free to reach out to [us](https://www.linkedin.com/in/nawfalhaddi/) or open an issue inside the repo of [this template](https://github.com/nawfalhaddi/react-native-template-by-nh).
+This library is made with love, to explain in details our personal approach to design a react native application with best third-party libraries, please check our [documentation](https://nawfalhaddi.github.io/react-native-template-by-nh/) for more details.
+If you have any idea or suggestion to improve this template, please feel free to reach out to [us](https://www.linkedin.com/in/nawfalhaddi/) or open an issue/PR inside this repo.
+
+## Libraries that are used in this template:
+
+- Navigation: `react-navigation V6`
+- API request: `react-query` and `axios`
+- State Management: `redux-toolkit` and `redux-persist`
+- Translation: `i18next` and `react-i18next` `react-native-localize`
+- Forms: `react-hook-form` and `yup`
+- Storage: `react-native-mmkv`
+- Styling: `styled-components`
+- Testing: `@testing-library/react-native`
 
 ## What you'll need:
 
@@ -23,19 +34,4 @@ npx react-native init MyApp --template react-native-template-by-nh
 cd MyApp && git init && yarn setup
 ```
 
-:::note Note
-
-the script `yarn setup` contains all necessary commands to setup your application for android and ios. if you want to know what are these commands check the script `setup` inside `package.json` file.
-
-:::
-
-## Libraries that are used in this template:
-
-- Navigation: `react-navigation V6`
-- API request: `react-query` and `axios`
-- State Management: `redux-toolkit` and `redux-persist`
-- Translation: `i18next` and `react-i18next` `react-native-localize`
-- Forms: `react-hook-form` and `yup`
-- Storage: `react-native-mmkv`
-- Styling: `styled-components`
-- Testing: `@testing-library/react-native`
+> **_Note:_** the script `yarn setup` contains all necessary commands to setup your application for android and ios. if you want to know what are these commands check the script `setup` inside `package.json` file.
