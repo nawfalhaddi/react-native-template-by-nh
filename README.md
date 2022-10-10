@@ -13,6 +13,7 @@ If you have any idea or suggestion to improve this template, please feel free to
 - Storage: `react-native-mmkv`
 - Styling: `styled-components`
 - Testing: `@testing-library/react-native`
+- Documentation: `Storybook` using `react-native-web`
 
 ## What you'll need:
 
