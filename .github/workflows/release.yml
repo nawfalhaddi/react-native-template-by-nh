@@ -1,16 +1,17 @@
----
-name: "tagged-release"
+# Name of the workflow
+name: Release
 
+# Run on every commit tag which begins with "v" (e.g., "v0.1.4")
 on:
   push:
     tags:
       - "v*"
 
+# Automatically create a GitHub Release, with release details specified (the relevant commits)
 jobs:
-  tagged-release:
-    name: "Tagged Release"
+  release:
+    name: "Release"
     runs-on: "ubuntu-latest"
-
     steps:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
