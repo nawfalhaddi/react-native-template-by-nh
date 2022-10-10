@@ -41,7 +41,8 @@ export const Button = ({
       disabled={disabled}
       style={[styles.button, !!color && {backgroundColor: color}]}
       onPress={onPress}
-      activeOpacity={0.8}>
+      activeOpacity={0.8}
+    >
       <Text style={[styles.buttonText, !!textColor && {color: textColor}]}>
         {text}
       </Text>
