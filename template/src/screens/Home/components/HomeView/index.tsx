@@ -6,13 +6,13 @@ import {useCreatePost} from '@screens/Home/hooks/useCreatePost';
 import {useGetPosts} from '@screens/Home/hooks/useGetPosts';
 import {useDispatch, useSelector} from '@store';
 import {incrementByAmount} from '@store/counterSlice';
-import {Button} from '@ui/components/Button/Button';
 import {horizontalScale, verticalScale} from '@ui/theme/scaling';
 import {styled} from '@ui/theme/styled-components';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {
   Alert,
+  Button,
   I18nManager,
   ScrollView,
   StyleSheet,
@@ -55,7 +55,7 @@ export default function HomeView({navigation}: HomeViewProps) {
       <Description>Implementation of redux</Description>
       <Description> Value: {value}</Description>
       <Button
-        text="+ Increment by one "
+        title="+ Increment by one "
         onPress={() => {
           dispatch(incrementByAmount(1));
         }}
@@ -75,7 +75,7 @@ export default function HomeView({navigation}: HomeViewProps) {
         Query Data state: {'\n'} title: {postsQuery?.data?.[0]?.title} {'\n'}
         id: {postsQuery?.data?.[0]?.id}
       </Description>
-      <Button text="Refetch data" onPress={postsQuery.refetch} />
+      <Button title="Refetch data" onPress={() => postsQuery.refetch()} />
 
       <Separator />
 
@@ -99,7 +99,7 @@ export default function HomeView({navigation}: HomeViewProps) {
       </Description>
 
       <Button
-        text="Create a post"
+        title="Create a post"
         onPress={() => {
           createPostMutation.mutate(
             {
@@ -126,7 +126,7 @@ export default function HomeView({navigation}: HomeViewProps) {
       <Description>{t('txt_welcome_to_rn_by_nh')}</Description>
 
       <Button
-        text={t('txt_change_language')}
+        title={t('txt_change_language')}
         onPress={() =>
           i18n
             .changeLanguage(i18n.language === 'ar' ? 'en' : 'ar')
