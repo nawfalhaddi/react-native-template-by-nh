@@ -26,7 +26,7 @@ Once your environnement you're ready to go with creating a new react native appl
 - First, navigate to where you want to start your project and run the following command.
 
 ```
-npx react-native init MyApp --template react-native-template-by-nh
+npx react-native@0.70.5 init MyApp --template react-native-template-by-nh
 ```
 
 - Once it's done, run this command in order to navigate to your new project and set it up for android and ios:
